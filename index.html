@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coba — Banking that moves at the speed of now</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 30 30" width="30" height="30">
+          <circle cx="13" cy="13" r="11" fill="#FFC72C"/>
+          <circle cx="17" cy="17" r="11" fill="#1E6FEB" opacity="0.92"/>
+        </svg>
+      </span>
+      Coba
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#trust">Security</a>
+      <a href="#cta">Pricing</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Open account</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span> No hidden fees, ever</span>
+      <h1>Send money like you send a text — <span class="hl">instant</span>, from your phone.</h1>
+      <p class="lead">Coba is the account for people who move fast: free transfers, a savings vault that pays you daily, and a card that works everywhere in seconds.</p>
+      <div class="hero-cta">
+        <a href="signup.html" class="btn btn-primary btn-lg">Open a free account</a>
+        <a href="login.html" class="btn btn-ghost btn-lg">I have an account</a>
+      </div>
+      <div class="hero-proof">
+        <div><b>2.4M+</b><span>accounts opened</span></div>
+        <div><b>&lt;10s</b><span>average transfer time</span></div>
+        <div><b>4.8/5</b><span>from 180k+ reviews</span></div>
+      </div>
+    </div>
+
+    <div class="beam-stage" aria-hidden="true">
+      <svg class="beam-path" viewBox="0 0 460 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="beamCurve" d="M110 90 C 260 90, 200 330, 350 330" stroke="rgba(255,255,255,0.16)" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+        <circle id="beamSpark" class="beam-spark" r="6" fill="#FFC72C"/>
+        <circle id="beamRing" r="6" fill="none" stroke="#FFC72C" stroke-width="2" opacity="0"/>
+      </svg>
+
+      <div class="beam-card from">
+        <div class="who">
+          <div class="avatar">TA</div>
+          <div>
+            <div class="name">Tomi A.</div>
+            <div class="role">Sending to Zainab</div>
+          </div>
+        </div>
+        <div class="amt">₦45,000.00</div>
+      </div>
+
+      <div class="beam-card to">
+        <div class="who">
+          <div class="avatar">ZK</div>
+          <div>
+            <div class="name">Zainab K.</div>
+            <div class="role">Coba account</div>
+          </div>
+        </div>
+        <div class="amt" id="receivedAmt">₦0.00</div>
+        <span class="status" id="receivedStatus" style="opacity:0"><span class="dot"></span> Received</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="trustbar" id="trust">
+  <div class="container trust-inner">
+    <div class="trust-item"><b>₦180B+</b><span>moved every month</span></div>
+    <div class="trust-item"><b>99.98%</b><span>transfer success rate</span></div>
+    <div class="trust-item"><b>24/7</b><span>human support</span></div>
+    <div class="trust-item"><b>CBN</b><span>licensed &amp; insured</span></div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Why Coba</span>
+      <h2>One account, built for how you actually spend</h2>
+      <p>No queues, no paperwork, no monthly fees hiding in the fine print. Just an account that keeps up.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Instant transfers</h3>
+        <p>Send to any bank in Nigeria in under 10 seconds, day or night, weekends included.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#0A1428" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Savings that pay daily</h3>
+        <p>Lock funds in a Vault and earn interest paid out every single day, not once a year.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2.5" stroke="#fff" stroke-width="2"/><path d="M3 10h18" stroke="#fff" stroke-width="2"/></svg>
+        </div>
+        <h3>A card that just works</h3>
+        <p>Tap to pay in stores, online, and abroad. Freeze it instantly from the app if it's ever misplaced.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Bank-grade security</h3>
+        <p>Biometric login, real-time fraud alerts, and funds insured up to the regulatory limit.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v4H4zM4 12h10v8H4zM17 12h3v8h-3z" stroke="#0A1428" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Pay bills in one tap</h3>
+        <p>Airtime, data, electricity and TV subscriptions — settled instantly, no extra charges.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Open in 3 minutes</h3>
+        <p>No branch visit, no paperwork. Verify your ID from your phone and start banking today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Getting started</span>
+      <h2>From download to your first transfer</h2>
+      <p>Four steps, about three minutes, zero forms to print.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Create your account</h4>
+        <p>Enter your name, phone number and email — no branch visit required.</p>
+        <div class="step-line"></div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Verify your identity</h4>
+        <p>Snap a photo of your ID and a quick selfie. Most people finish in under a minute.</p>
+        <div class="step-line"></div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Fund your wallet</h4>
+        <p>Add money from any bank card or transfer, and watch it land instantly.</p>
+        <div class="step-line"></div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Start moving money</h4>
+        <p>Send, save, pay bills, and request a physical or virtual card whenever you're ready.</p>
+        <div class="step-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-band">
+      <div class="cta-text">
+        <h2>Your money shouldn't wait in line.</h2>
+        <p>Open a Coba account today and make your first transfer before the kettle boils.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="signup.html" class="btn btn-primary btn-lg">Open a free account</a>
+        <a href="login.html" class="btn btn-ghost btn-lg">Log in</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 30 30" width="30" height="30">
+              <circle cx="13" cy="13" r="11" fill="#FFC72C"/>
+              <circle cx="17" cy="17" r="11" fill="#1E6FEB" opacity="0.92"/>
+            </svg>
+          </span>
+          Coba
+        </a>
+        <p>Coba is a licensed digital bank helping people across Nigeria send, save and spend without friction.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#features">Transfers</a></li>
+          <li><a href="#features">Savings vault</a></li>
+          <li><a href="#features">Cards</a></li>
+          <li><a href="#features">Bill payments</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Coba</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#trust">Security</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Help centre</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Terms of use</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Coba Digital Bank. All rights reserved.</span>
+      <div class="socials">
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
