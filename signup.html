@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create your account — Coba</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="chat-widget.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-visual">
+  <a href="index.html" class="logo">
+    <span class="logo-mark">
+      <svg viewBox="0 0 30 30" width="30" height="30">
+        <circle cx="13" cy="13" r="11" fill="#FFC72C"/>
+        <circle cx="17" cy="17" r="11" fill="#1E6FEB" opacity="0.92"/>
+      </svg>
+    </span>
+    Coba
+  </a>
+
+  <div class="auth-quote">
+    <div class="mark">"</div>
+    <p>Opened my account on a bus ride and got my card in four days. Wasn't expecting that.</p>
+    <div class="who">Tomi A. — Coba customer since 2023</div>
+  </div>
+
+  <div class="auth-card-float" aria-hidden="true">
+    <div class="row">
+      <span style="font-size:12.5px;color:#4A5568;font-weight:600;">New account</span>
+      <div class="chip"></div>
+    </div>
+    <div class="bal">Welcome ✦</div>
+    <div class="num" style="margin-top:14px;">Ready in ~3 minutes</div>
+  </div>
+</div>
+
+<div class="auth-form-wrap">
+  <div class="auth-form">
+    <a href="index.html" class="back-link">&larr; Back to home</a>
+    <h1>Create your account</h1>
+    <p class="sub">Already banking with us? <a href="login.html">Log in</a></p>
+
+    <div class="form-msg" id="formMsg"><span>✓</span> <span id="formMsgText">Account created — welcome to Coba</span></div>
+
+    <form id="signupForm" novalidate>
+      <div class="name-row">
+        <div class="field" id="firstField">
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Tomi" autocomplete="given-name">
+          <div class="field-error">Required.</div>
+        </div>
+        <div class="field" id="lastField">
+          <label for="lastName">Last name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Adebayo" autocomplete="family-name">
+          <div class="field-error">Required.</div>
+        </div>
+      </div>
+
+      <div class="field" id="emailField">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+        <div class="field-error">Enter a valid email address.</div>
+      </div>
+
+      <div class="field" id="phoneField">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="080 000 00000" autocomplete="tel">
+        <div class="field-error">Enter a valid phone number.</div>
+      </div>
+
+      <div class="field" id="passField">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password">
+          <button type="button" class="toggle-pass" id="togglePass">Show</button>
+        </div>
+        <div class="strength-meter" id="strengthMeter">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="field-hint" id="strengthHint">Use 8+ characters with a number and a symbol.</div>
+        <div class="field-error">Password must be at least 8 characters.</div>
+      </div>
+
+      <div class="row-between">
+        <label class="checkbox-row">
+          <input type="checkbox" id="terms">
+          I agree to Coba's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg">Create account</button>
+
+      <div class="divider">or sign up with</div>
+      <div class="social-row">
+        <button type="button" class="btn-social" data-oauth="google">
+          <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#FFC72C" d="M12 2 2 7l10 5 10-5-10-5z"/><path fill="#1E6FEB" d="M2 17l10 5 10-5V7l-10 5-10-5v10z"/></svg>
+          Google
+        </button>
+        <button type="button" class="btn-social" data-oauth="apple">
+          <svg width="16" height="16" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="#0B3D91" stroke-width="2"/></svg>
+          Apple
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="oauth-overlay" id="oauthOverlay" aria-hidden="true">
+  <div class="oauth-modal" id="oauthModal"></div>
+</div>
+
+<div id="cobaChatRoot">
+  <button id="chatBubble" class="chat-bubble" aria-label="Open Coba Assistant">
+    <svg class="icon-chat" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H9l-4.5 4V15.5" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="9" cy="9.5" r="1.1" fill="#FFC72C"/><circle cx="13" cy="9.5" r="1.1" fill="#FFC72C"/></svg>
+    <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+    <span class="chat-bubble-ping" aria-hidden="true"></span>
+    <span class="chat-bubble-badge" id="chatBadge">1</span>
+  </button>
+
+  <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Coba Assistant" aria-hidden="true">
+    <div class="chat-panel-inner">
+      <div class="chat-sidebar-overlay" id="sidebarOverlay"></div>
+
+      <div class="chat-sidebar" id="chatSidebar">
+        <div class="chat-sidebar-head">
+          <span>Your chats</span>
+          <button class="icon-btn" id="closeSidebarBtn" aria-label="Close chat list" style="background:rgba(11,61,145,0.08);color:#0B3D91;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <button class="new-chat-btn" id="newChatBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          New chat
+        </button>
+        <div class="chat-session-list" id="chatSessionList"></div>
+      </div>
+
+      <div class="chat-main">
+        <div class="chat-header">
+          <button class="icon-btn" id="historyBtn" aria-label="Chat history">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="chat-header-title">
+            <span class="chat-avatar">
+              <svg viewBox="0 0 30 30" width="20" height="20"><circle cx="13" cy="13" r="11" fill="#FFC72C"/><circle cx="17" cy="17" r="11" fill="#1E6FEB" opacity="0.92"/></svg>
+            </span>
+            <div>
+              <div class="chat-name">Coba Assistant</div>
+              <div class="chat-status"><span class="dot"></span>Online</div>
+            </div>
+          </div>
+          <button class="icon-btn" id="closeChatBtn" aria-label="Close chat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages"></div>
+
+        <div class="chat-suggestions" id="chatSuggestions">
+          <button type="button" class="suggestion-chip">How do I open an account?</button>
+          <button type="button" class="suggestion-chip">What are transfer fees?</button>
+          <button type="button" class="suggestion-chip">Is my money safe?</button>
+          <button type="button" class="suggestion-chip">My card is lost</button>
+        </div>
+
+        <form class="chat-input-row" id="chatForm">
+          <input type="text" id="chatInput" placeholder="Ask Coba Assistant..." autocomplete="off">
+          <button type="submit" class="chat-send-btn" aria-label="Send message">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 11l18-8-8 18-2-8-8-2z" fill="#0A1428"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="chat-widget.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
